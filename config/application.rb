@@ -27,6 +27,8 @@ module RailsArticle
     #
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
+
+    config.hosts << /[a-z0-9]+\.yumicode\.net/
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")

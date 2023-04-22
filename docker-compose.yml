@@ -11,7 +11,7 @@ services:
       - '4004:4004'
     volumes:
       - .:/home/server/blogonrails
-    image: 'rails-test:1.0'
+    image: 'blogonrails:1.0'
     depends_on:
       - db-blogonrails
     restart: always

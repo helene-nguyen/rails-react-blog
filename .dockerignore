@@ -1,0 +1,8 @@
+__docs__
+__test__
+data
+.git
+*.md
+**/node_modules/
+**/dist
+*.http

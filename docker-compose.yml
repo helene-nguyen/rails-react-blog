@@ -1,0 +1,41 @@
+version: '1'
+
+services:
+  ruby-app:
+    container_name: 'ruby-blogonrails'
+    build: .
+    env_file: .env
+    networks:
+      - blogonrails-network
+    ports:
+      - '4004:4004'
+    volumes:
+      - .:/home/server/blogonrails
+    image: 'blogonrails:1.0'
+    depends_on:
+      - db-blogonrails
+    restart: always
+
+  db-blogonrails:
+    container_name: postgres-blogonrails
+    image: 'tobi312/rpi-postgresql-postgis:15-3.3-alpine-arm'
+    env_file: .env
+    networks:
+      - blogonrails-network
+    ports:
+      - '5438:${PGPORT}'
+    environment:
+      - POSTGRES_USER=${PGUSER}
+      - POSTGRES_PASSWORD=${PGPASSWORD}
+      - POSTGRES_DB=${PGDATABASE}
+    volumes:
+      - db-data:/var/lib/postgresql/data # persist data even if container shuts down
+    restart: always
+
+volumes:
+  db-data: # names volumes can be managed easier using docker-compose
+
+networks:
+  blogonrails-network:
+    name: blogonrails-network
+    driver: bridge

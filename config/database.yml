@@ -25,26 +25,26 @@ default: &default
 development:
   adapter: postgresql
   encoding: unicode
-  database: <%= ENV["PG_DATABASE"] %>
-  username: <%= ENV["PG_USER"] %>
-  password: <%= ENV["PG_PASSWORD"] %>
-  port: <%= ENV["PG_PORT_RASPBERRY"] %>
-  host: <%= ENV["PG_RASPBERRY_HOST"] %>
+  database: <%= ENV["PGDATABASE"] %>
+  username: <%= ENV["PGUSER"] %>
+  password: <%= ENV["PGPASSWORD"] %>
+  port: <%= ENV["PGPORT"] %>
+  host: <%= ENV["PGHOST"] %>
 
 test:
   adapter: postgresql
   encoding: unicode
-  database: <%= ENV["PG_DATABASE"] %>_test
-  username: <%= ENV["PG_USER"] %>
-  password: <%= ENV["PG_PASSWORD"] %>
-  port: <%= ENV["PG_PORT_RASPBERRY"] %>
-  host: <%= ENV["PG_RASPBERRY_HOST"] %>
+  database: <%= ENV["PGDATABASE"] %>_test
+  username: <%= ENV["PGUSER"] %>
+  password: <%= ENV["PGPASSWORD"] %>
+  port: <%= ENV["PGPORT"] %>
+  host: <%= ENV["PGHOST"] %>
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: <%= ENV["PG_DATABASE"] %>_production
-  username: <%= ENV["PG_USER"] %>
-  password: <%= ENV["PG_PASSWORD"] %>
-  port: <%= ENV["PG_PORT_RASPBERRY"] %>
-  host: <%= ENV["PG_RASPBERRY_HOST"] %>
+  database: <%= ENV["PGDATABASE"] %>_production
+  username: <%= ENV["PGUSER"] %>
+  password: <%= ENV["PGPASSWORD"] %>
+  port: <%= ENV["PGPORT"] %>
+  host: <%= ENV["PGHOST"] %>

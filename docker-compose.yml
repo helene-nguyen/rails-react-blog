@@ -2,7 +2,7 @@ version: '1'
 
 services:
   ruby-app:
-    container_name: "ruby-blogonrails"
+    container_name: 'ruby-blogonrails'
     build: .
     env_file: .env
     networks:
@@ -23,7 +23,7 @@ services:
     networks:
       - blogonrails-network
     ports:
-      - "5438:${PGPORT}"
+      - '5438:${PGPORT}'
     environment:
       - POSTGRES_USER=${PGUSER}
       - POSTGRES_PASSWORD=${PGPASSWORD}

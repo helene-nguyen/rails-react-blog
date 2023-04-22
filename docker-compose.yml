@@ -10,8 +10,8 @@ services:
     ports:
       - '4004:4004'
     volumes:
-      - .:/home/server/api-learnerr
-    image: 'api-learnerr:1.0'
+      - .:/home/server/blogonrails
+    image: 'rails-test:1.0'
     depends_on:
       - db-blogonrails
     restart: always

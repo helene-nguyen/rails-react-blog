@@ -8,7 +8,7 @@ services:
     networks:
       - blogonrails-network
     ports:
-      - '4003:4003'
+      - '4004:4004'
     volumes:
       - .:/home/server/api-learnerr
     image: 'api-learnerr:1.0'

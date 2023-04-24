@@ -23,7 +23,7 @@ const Articles = () => {
   const allArticles = articles.map((article, index) => (
     <div key={index} className="col-md-6 col-lg-4">
       <div className="card mb-4">
-        <img src={"https://res.cloudinary.com/dkizcn12a/image/upload/v1681216844/article2_yp9awb.jpg"} className="card-img-top" alt={`article image`} />
+        <img src={article.image} className="card-img-top" alt={`article image`} />
         <div className="card-body">
           <h5 className="card-title">{article.title}</h5>
           <Link to={`/article/${article.id}`} className="btn custom-button">
